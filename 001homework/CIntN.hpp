@@ -1,4 +1,8 @@
+#ifndef CINTN
+#define CINTN
+
 #define N 3
+
 class CIntN
 {
 	private:
@@ -7,10 +11,13 @@ class CIntN
 		CIntN operator+(const CIntN other);
 		CIntN operator-(const CIntN other);
 		
-		void Value_check();
 		int num_digits();
+		int Value ();
 
 		CIntN();
 		CIntN(const unsigned int value);
 };
 
+#endif
+
+#pragma once

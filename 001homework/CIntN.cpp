@@ -1,6 +1,4 @@
 #include "CIntN.hpp"
-#include <iostream>
-
 
 CIntN::CIntN()//конструктор по умолчанию
 {
@@ -52,9 +50,9 @@ CIntN CIntN::operator-( CIntN other)
 	return Vv;
 }
 
-void CIntN::Value_check()
+int  CIntN::Value()
 {
-	std::cout << value<<'\n';
+	return value;
 }
 
 int CIntN::num_digits()//сколько цифр в числе
