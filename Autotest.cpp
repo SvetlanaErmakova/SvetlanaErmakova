@@ -8,8 +8,8 @@ int Autotest1()
 {
     int f = 0;
 
-    CIntN V1 = CIntN(115);
-    CIntN V2 = CIntN(111);
+    CIntN V1(115);
+    CIntN V2(111);
     CIntN V3 = V1 + V2;
 
     if (V3.Value() == 226)
@@ -30,8 +30,8 @@ int Autotest2()
 {
     int f = 0;
 
-    CIntN V1 = CIntN(456);
-    CIntN V2 = CIntN(111);
+    CIntN V1(456);
+    CIntN V2(111);
     CIntN V3 = V1 - V2;
 
     if (V3.Value() == 345)

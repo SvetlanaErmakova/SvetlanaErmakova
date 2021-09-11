@@ -6,18 +6,17 @@
 class CIntN
 {
 	private:
-		unsigned int value;
+		int value[N];
 	public:
 		CIntN operator+(const CIntN other);
 		CIntN operator-(const CIntN other);
 		
-		int num_digits();
 		int Value ();
 
 		CIntN();
 		CIntN(const unsigned int value);
 };
 
-#endif
+int num_digits(int val);
 
-#pragma once
+#endif
