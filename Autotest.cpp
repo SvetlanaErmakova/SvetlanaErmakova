@@ -1,5 +1,5 @@
 #include <iostream>
-#include "CIntN.hpp"
+#include "CVector.hpp"
 #include "Autotest.hpp"
 
 using namespace std;
@@ -8,18 +8,22 @@ int Autotest1()
 {
     int f = 0;
 
-    CIntN V1(115);
-    CIntN V2(111);
-    CIntN V3 = V1 + V2;
+    CVector V1;
+    V1.add_elt(9);
 
-    if (V3.Value() == 226)
+    CVector V2;
+    V2.add_elt(3);
+
+    CVector v;
+    v = V1 + V2;
+    if (v[0]==12)
     {
         f = 1;
         cout << "Test 1 passed...\n";
     }
     else
     {
-       cout << "Test 1 failed!\n";
+        cout << "Test 1 failed!\n";
         f = 0;
     }
 
@@ -30,11 +34,15 @@ int Autotest2()
 {
     int f = 0;
 
-    CIntN V1(456);
-    CIntN V2(111);
-    CIntN V3 = V1 - V2;
+    CVector V1;
+    V1.add_elt(9);
 
-    if (V3.Value() == 345)
+    CVector V2;
+    V2.add_elt(3);
+
+    CVector v;
+    v = V1 - V2;
+    if (v[0] == 6)
     {
         f = 1;
         cout << "Test 2 passed...\n";
@@ -47,10 +55,39 @@ int Autotest2()
 
     return f;
 }
+
+int Autotest3()
+{
+    int f = 0;
+
+    CVector V1;
+    V1.add_elt(9);
+
+    CVector V2;
+    V2.add_elt(3);
+
+    CVector v;
+    v = V1*V2;
+    if (v[0] == 27)
+    {
+        f = 1;
+        cout << "Test 3 passed...\n";
+    }
+    else
+    {
+        cout << "Test 3 failed!\n";
+        f = 0;
+    }
+
+    return f;
+}
+
+
 int Autotest()
 {
-    if (Autotest1() * Autotest2() == 1)
+    if (Autotest1() * Autotest2()* Autotest3() == 1)
         return 1;
     else
         return 0;
 }
+
