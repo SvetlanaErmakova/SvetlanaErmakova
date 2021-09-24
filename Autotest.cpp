@@ -66,9 +66,7 @@ int Autotest3()
     CVector V2;
     V2.add_elt(3);
 
-    CVector v;
-    v = V1*V2;
-    if (v[0] == 27)
+    if (V1 * V2 == 27)
     {
         f = 1;
         cout << "Test 3 passed...\n";

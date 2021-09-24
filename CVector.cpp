@@ -87,20 +87,19 @@ CVector CVector::operator-(CVector other)
 	return V;
 }
 
-CVector CVector::operator*(CVector other)
+double CVector::operator*(CVector other)
 {
-	CVector V;
-
+	double S = 0;
 	if (other.get_size() != this->get_size())
 		throw - 1;
 	else
 	{
 		for (size_t i = 0; i < size_; i++)
 		{
-			V.add_elt(other[i] *arr[i]);
+			S+= other[i] * arr[i];
 		}
 	}
-	return V;
+	return S;
 }
 //функции
 

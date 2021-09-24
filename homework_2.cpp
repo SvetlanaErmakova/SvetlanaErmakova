@@ -62,9 +62,8 @@ int main()
             v01.print_vec();
 
             cout << "\noperator* result: ";
-            CVector v02;
-            v02 = V1* V2;
-            v02.print_vec();
+            double r = V1* V2;
+            cout << r;
 
         }
         catch(...) { cout << "\nincorrect for this class" << endl; }
