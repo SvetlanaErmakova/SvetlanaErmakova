@@ -7,7 +7,7 @@ class CVector
 		CVector();
 		CVector(const size_t size);
 		CVector(const CVector& other);
-		//~CVector();
+		~CVector();
 
 		size_t get_size() const;
 		double* get_arr() const;

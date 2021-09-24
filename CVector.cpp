@@ -24,13 +24,17 @@ CVector::CVector(const size_t size)//конструктор
 CVector::CVector(const CVector& other)//конструктор копирования
 {
 	size_ = other.get_size();
-	arr = other.get_arr();
+	arr = new double[size_];
+	for (size_t i = 0; i < size_; i++)
+	{
+		arr[i] = other.arr[i];
+	}
 }
 
-//CVector::~CVector()//деструктор, почему то срабатывает в return, когда внутри оп+ создать объект, кт будет результатом, те до мейна этот объет очищается
-//{
-//	delete[] arr;
-//}
+CVector::~CVector()//деструктор
+{
+	delete[] arr;
+}
 
 //
 size_t CVector::get_size() const
@@ -46,7 +50,11 @@ double* CVector::get_arr() const
 CVector& CVector::operator=(const CVector& other)
 {
 	size_ = other.get_size();
-	arr = other.get_arr();
+	arr = new double[size_];
+	for (size_t i = 0; i < size_; i++)
+	{
+		arr[i] = other.arr[i];
+	}
 	return *this;
 }
 
